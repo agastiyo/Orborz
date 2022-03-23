@@ -3,3 +3,6 @@ Orborz Creation Journal
 
 3/21/2022
 Today I came up with the idea of creating a Unity Game. The Idea consists of being in control of multiple orbs in a puzlle like game, where the player has to get a specific orb into the goal zone while controlling multiple other orbs at the same time. I set up the project using the unity game engine and created the repository. I made a test scene where a sample environment was created and the script for moving the orbs was written. I still need to fix the ball physics.
+
+3/22/2022
+Today I fixed the physics of the balls and got the movement system and gravity working well. I might need to make some slight tweaks to get the perfect physics behavior that I want.
