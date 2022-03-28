@@ -10,7 +10,7 @@ public class ControlsHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentBall = null;
+        currentBall = FindObjectOfType<MainOrb>().GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -21,10 +21,7 @@ public class ControlsHandler : MonoBehaviour
 
     public void ChangeCurrentBall(Rigidbody2D newBall) 
     {
-        if (currentBall) 
-        {
-            currentBall.velocity = new Vector2(0,0);    //Stop the ball from moving
-        }
+        currentBall.velocity = new Vector2(0,0);    //Stop the ball from moving
         currentBall = newBall;
     }
 }
