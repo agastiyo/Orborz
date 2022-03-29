@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ControlsHandler : MonoBehaviour
 {
-    Rigidbody2D currentBall;
-    const float speed = 10f;
+    [HideInInspector] public Rigidbody2D currentBall;
+    private const float speed = 10f;
 
     // Start is called before the first frame update
     void Start()
