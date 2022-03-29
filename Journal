@@ -6,3 +6,9 @@ Today I came up with the idea of creating a Unity Game. The Idea consists of bei
 
 3/22/2022
 Today I fixed the physics of the balls and got the movement system and gravity working well. I might need to make some slight tweaks to get the perfect physics behavior that I want.
+
+3/24/2022
+Updated controls to move one selected ball at a time rather than all the balls at once. The ball to control needs to be selected by clicking. This makes the game easier to play and understand, as well as makes the physics seem more realistic.
+
+3/28/2022
+Optimized movement. Selected ball was initially set to null, which caused the game to run two extra conditionals to check if the object was null every frame. Created a script to specify the main orb and set that as the initially selected ball by default to eliminate the need for the conditionals to check if the selected ball is null twice every frame. Created a green material to differentiate the main ball from the other balls in the game.
