@@ -12,3 +12,6 @@ Updated controls to move one selected ball at a time rather than all the balls a
 
 3/28/2022
 Optimized movement. Selected ball was initially set to null, which caused the game to run two extra conditionals to check if the object was null every frame. Created a script to specify the main orb and set that as the initially selected ball by default to eliminate the need for the conditionals to check if the selected ball is null twice every frame. Created a green material to differentiate the main ball from the other balls in the game.
+
+3/29/2022
+Finished creating goal functionality. The level can now detect when it has been beaten. Imported TextMeshPro shaders to make UI building slightly more simple. Using this, I created the UI that appears when the level is beaten and programmed when it should and shouldn't show up. The UI consists of two buttons for which I created a handler they can call on to access their respective functions. Then the button functionality coding was started. Next I need to make a list of all the levels in the game so the game can keep progressing the player.
