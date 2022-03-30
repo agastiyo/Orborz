@@ -15,4 +15,14 @@ public class ButtonHandler : MonoBehaviour
     {
         
     }
+
+    public void NextLevelButton() 
+    {
+
+    }
+
+    public void ExitGameButton() 
+    {
+        Application.Quit();
+    }
 }
