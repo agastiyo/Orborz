@@ -15,4 +15,14 @@ public class WinLossHandler : MonoBehaviour
     {
         
     }
+
+    public void OnWin() 
+    {
+        //- what to do when a level is beaten -
+        Debug.Log("Level Beaten!");
+        //commence celebration
+        //put up level end dialogue
+        //wait for user input
+        //go to next level
+    }
 }
