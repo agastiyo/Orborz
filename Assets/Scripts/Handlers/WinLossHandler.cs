@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WinLossHandler : MonoBehaviour
 {
+    public int[] levelList = {1,2,3,4,5};
+
     public Canvas winLossDialogue;
 
     // Start is called before the first frame update
