@@ -6,22 +6,31 @@ public class ControlsHandler : MonoBehaviour
 {
     [HideInInspector] public Rigidbody2D currentBall;
     private const float speed = 10f;
+    public bool LevelRunning;
 
     // Start is called before the first frame update
     void Start()
     {
-        currentBall = FindObjectOfType<MainOrb>().GetComponent<Rigidbody2D>();
+        LevelRunning = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        currentBall.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, currentBall.velocity.y);
+        if(LevelRunning) 
+        {
+            currentBall.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, currentBall.velocity.y);
+        }
     }
 
     public void ChangeCurrentBall(Rigidbody2D newBall) 
     {
         currentBall.velocity = new Vector2(0,0);    //Stop the ball from moving
         currentBall = newBall;
+    }
+    public void NewLevel() 
+    {
+        currentBall = FindObjectOfType<MainOrb>().GetComponent<Rigidbody2D>();
+        LevelRunning = true;
     }
 }
