@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class WinLossHandler : MonoBehaviour
 {
@@ -40,10 +41,36 @@ public class WinLossHandler : MonoBehaviour
         {
             StartCoroutine(UnloadScene(levelList[currentLevelPos-1]));
         }
-
         controlsHandler.LevelRunning = false;
         winLossDialogue.enabled = false;
         StartCoroutine(LoadScene(levelList[currentLevelPos]));
+
+        MonoBehaviour[] allObjects = FindObjectsOfType<MonoBehaviour>();
+        int counter = 0;
+
+        TextMeshProUGUI difficulty = FindObjectOfType<Difficulty>().GetComponent<TextMeshProUGUI>();
+
+        foreach(MonoBehaviour obj in allObjects) 
+        {
+            counter++;
+        }
+
+        if (currentLevelPos < 4) {
+
+            if (counter < 30) 
+            {
+                difficulty.text = $"Level {currentLevelPos} - Easy";
+            }
+            else if (counter > 30 && counter < 50) 
+            {
+                difficulty.text = $"Level {currentLevelPos} - Medium";
+            }
+            else if (counter > 50) 
+            {
+                difficulty.text = $"Level {currentLevelPos} - Hard";
+            }
+        }
+
         Debug.Log("Level fully initialized!");
     }
 

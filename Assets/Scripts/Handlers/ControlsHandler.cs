@@ -5,7 +5,7 @@ using UnityEngine;
 public class ControlsHandler : MonoBehaviour
 {
     [HideInInspector] public Rigidbody2D currentBall;
-    private const float speed = 10f;
+    private const float speed = 5f;
     public bool LevelRunning;
 
     // Start is called before the first frame update
