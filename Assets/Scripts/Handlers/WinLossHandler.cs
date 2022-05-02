@@ -9,7 +9,6 @@ public class WinLossHandler : MonoBehaviour
     [HideInInspector] public ControlsHandler controlsHandler;
     public int[] levelList = {1,2,3,4,5};
     public int currentLevelPos;
-
     public Canvas winLossDialogue;
 
     // Start is called before the first frame update
@@ -18,12 +17,6 @@ public class WinLossHandler : MonoBehaviour
         controlsHandler = FindObjectOfType<ControlsHandler>();
         currentLevelPos = 0;
         InitializeLevel(currentLevelPos, false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void OnWin() 
@@ -95,3 +88,5 @@ public class WinLossHandler : MonoBehaviour
         catch { SceneManager.LoadScene("GameEnd", LoadSceneMode.Additive); }
     }
 }
+
+//Using the Unity Game Engine
