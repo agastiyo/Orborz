@@ -44,6 +44,7 @@ public class WinLossHandler : MonoBehaviour
         controlsHandler.LevelRunning = false;
         winLossDialogue.enabled = false;
         StartCoroutine(LoadScene(levelList[currentLevelPos]));
+        Debug.Log("Level fully initialized!");
     }
 
     private IEnumerator LoadScene(int SceneToLoad) 

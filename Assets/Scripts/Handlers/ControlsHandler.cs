@@ -27,10 +27,12 @@ public class ControlsHandler : MonoBehaviour
     {
         currentBall.velocity = new Vector2(0,0);    //Stop the ball from moving
         currentBall = newBall;
+        Debug.Log($"Now Controlling {newBall.name}");
     }
     public void NewLevel() 
     {
         currentBall = FindObjectOfType<MainOrb>().GetComponent<Rigidbody2D>();
         LevelRunning = true;
+        Debug.Log($"Now Controlling {currentBall.name}");
     }
 }
